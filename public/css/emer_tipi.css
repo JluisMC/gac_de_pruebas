@@ -1,0 +1,225 @@
+/* ==========================================
+   RESET & ESTILOS BASE
+   ========================================== */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 10px;
+    color: #333333;
+}
+
+/* ==========================================
+   ENCABEZADO GAC
+   ========================================== */
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+
+.header-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #7b9ebd;
+}
+
+.header-title h2 {
+    margin: 0;
+    color: #003366;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ==========================================
+   ESTRUCTURA DEL FORMULARIO (GRID DE 2 COLUMNAS)
+   ========================================== */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.col-left,
+.col-right {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Filas alineadas horizontalmente (Etiqueta + Control) */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.lbl-left {
+    width: 120px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 8px;
+    color: #000000;
+}
+
+.lbl-val {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Etiquetas en bloque arriba de los controles */
+.lbl-block,
+.lbl-bold {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    color: #000000;
+}
+
+.lbl-sub {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+/* ==========================================
+   INPUTS, SELECTS Y TEXTAREAS
+   ========================================== */
+.select-gac,
+.select-gac-right {
+    width: 250px;
+    font-size: 11px;
+    padding: 1px;
+    border: 1px solid #7f9db9;
+    background-color: #ffffff;
+}
+
+.input-gac {
+    font-size: 11px;
+    border: 1px solid #7f9db9;
+    padding: 1px 3px;
+    background-color: #ffffff;
+}
+
+.textarea-gac {
+    width: 100%;
+    font-size: 11px;
+    border: 1px solid #7f9db9;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #ffffff;
+}
+
+.inputText:focus,
+.selectText:focus,
+.select-gac:focus,
+.textarea-gac:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+/* ==========================================
+   COMPONENTES DE COLUMNA DERECHA
+   ========================================== */
+.row-buzon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    margin-bottom: 3px;
+}
+
+.lbl-buzon {
+    font-size: 11px;
+    color: #333333;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.radio-label {
+    margin-right: 10px;
+}
+
+.inline-input {
+    margin-right: 10px;
+}
+
+.input-inline {
+    width: 60px;
+    border: 1px solid #7f9db9;
+    font-size: 11px;
+    padding: 1px 3px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+}
+
+.check-label {
+    font-size: 11px;
+}
+
+.campo-obligatorio {
+    font-size: 10px;
+    margin-top: 15px;
+    color: #333333;
+}
+
+/* ==========================================
+   BOTONES ESTILO CLÁSICO GAC
+   ========================================== */
+.btn-gac,
+.btnOpc {
+    font-size: 11px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    background-color: #f0f0f0;
+    border: 1px solid #003366;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #000000;
+}
+
+.btn-gac:hover,
+.btnOpc:hover {
+    background: linear-gradient(to bottom, #e0e0e0, #cccccc);
+}
+
+.btn-x {
+    padding: 1px 6px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (ACCIONES)
+   ========================================== */
+.footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+.btn-group-center {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.btn-sms {
+    margin-left: auto;
+}
+

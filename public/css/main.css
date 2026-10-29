@@ -1,0 +1,241 @@
+/**
+ * ============================================================================
+ * ARCHIVO: main.css
+ * DESCRIPCIÓN: Estilos globales, layout base del dashboard y menú superior.
+ * RESPONSABILIDAD:
+ *  - Marco general (1000px centrado), Header y Banner.
+ *  - Barra divisoria azul y Menús desplegables (Dropdown Consultas).
+ *  - Estilos globales para botones (.btnOpc) e inputs (.inputText).
+ *  - Navegación y diseño de Pestañas principales (.custom-tabs).
+ * ============================================================================
+ */
+/* ==========================================================================
+   ESTILOS GENERALES Y LAYOUT BASE (GAC)
+   ========================================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marco de la tabla principal (1000px centrado) */
+.tabla_principal {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #000066;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+.header-container {
+    height: 110px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.agent-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Submenú o barra divisoria azul/gris */
+.barra-divisoria {
+    background-color: #EEEEEE;
+    height: 24px;
+    border-top: 1px solid #000066;
+    border-bottom: 1px solid #000066;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.menu-link {
+    color: #333333;
+    font-weight: bold;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0 12px;
+}
+
+.menu-link:hover {
+    color: #000066;
+    text-decoration: underline;
+}
+
+.output_datos {
+    font-weight: bold;
+    color: #000000;
+    font-size: 11px;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #000066;
+    height: 12px;
+}
+
+.main-content {
+    padding: 8px 12px;
+    flex-grow: 1;
+}
+
+/* --- Elementos de Formulario Comunes --- */
+.inputText,
+.inputSecret,
+.selectText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 1px 4px;
+    height: 20px;
+    border: 1px solid #7f9db9;
+    background-color: #ffffff;
+    border-radius: 0px !important;
+    box-sizing: border-box;
+}
+
+.inputText:focus,
+.inputSecret:focus,
+.selectText:focus {
+    outline: 1px solid #000066;
+}
+
+.btnOpc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    height: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000066;
+    padding: 0px 10px;
+    cursor: pointer;
+    border-radius: 0px !important;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+.btnOpc:hover {
+    background-color: #e6e6e6;
+    border-color: #333333;
+}
+
+.field-label {
+    font-weight: bold;
+    color: #000066;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.commandLink {
+    color: #000066;
+    text-decoration: underline;
+}
+
+/* --- Navegación de Pestañas --- */
+.custom-tabs {
+    background: linear-gradient(to bottom, #e0e0e0 0%, #cccccc 100%);
+    border: 1px solid #b5b5b5;
+    border-radius: 4px 4px 0 0;
+    padding: 3px 3px 0 3px;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.custom-tabs .nav-link {
+    font-size: 11px;
+    color: #333333;
+    background: linear-gradient(to bottom, #f2f2f2 0%, #dcdcdc 100%);
+    border: 1px solid #a6a6a6;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    margin-right: 3px;
+    padding: 3px 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.custom-tabs .nav-link.active {
+    background: #ffffff;
+    border: 1px solid #a6a6a6;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: -1px;
+    color: #000000;
+}
+
+.tab-panel-container {
+    border: px solid #a6a6a6;
+    padding: 10px 0;
+    background-color: #ffffff;
+    min-height: 520px;
+}
+
+/* Contenedor del menú */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para contenedor desplegable */
+.dropdown-menu-custom {
+    position: relative;
+    display: inline-block;
+}
+
+/* Submenú desplegable flotante */
+.dropdown-content-custom {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #e0e0e0; */
+    background-color: #e0e0e0;
+    /* Fondo gris claro clásico */
+    min-width: 230px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    /* border: 1px solid #000080; */
+    /* border: 1px solid #000066; */
+    z-index: 1000;
+    box-shadow: none;
+}
+
+/* Enlaces del submenú */
+.dropdown-content-custom a {
+    color: #000000;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 9px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    /* border-bottom: 1px solid #c0c0c0; */
+    border-bottom: 1px solid #000066;
+    white-space: nowrap;
+}
+
+Efecto Hover al pasar sobre cada ítem .dropdown-content-custom a:hover {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+/*.dropdown-content-custom a:hover {
+  /*  background-color: transparent;
+    /* Azul marino seleccionado */
+/*color: #000000;
+/*}
+
+/* Mostrar menú al pasar el ratón */
+.dropdown-menu-custom:hover .dropdown-content-custom {
+    display: block;
+}
+
+/* Destacar la pestaña 'Consultas' activa mientras está abierto */
+.dropdown-menu-custom:hover .menu-link {
+    background-color: #000080;
+    color: #ffffff !important;
+}

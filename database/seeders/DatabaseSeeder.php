@@ -2,24 +2,34 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // 1. Insertamos los 5 usuarios del sistema
+        $usuarios = [
+            [
+                'name'     => 'Jose Mendez',
+                'username' => 'outs_jomendez',
+                'email'    => 'jomendez@tigo.com.pa',
+                'password' => Hash::make('Telecel123*'),
+                'grupo'    => 'CALLCENTER GT°',
+            ],
+        ];
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        foreach ($usuarios as $usuario) {
+            User::create($usuario);
+        }
+
+        // Ejecutamos la carga de cuentas y abonados
+        $this->call([
+            GacDataSeeder::class,
+            TipologiaSeeder::class,
+            ProvinciaSeeder::class,
         ]);
     }
 }

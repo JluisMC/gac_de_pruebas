@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    background-color: #ffffff;
+    margin: 10px;
+    color: #000;
+}
+
+.header-title {
+    text-align: center;
+    color: #3b1e70;
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.search-box {
+    border: 1px solid #000080;
+    background-color: #ffffff;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 2px 3px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.label {
+    color: #000;
+    padding-right: 3px;
+}
+
+.inputText,
+.selectText {
+    font-size: 11px;
+    border: 1px solid #7f9db9;
+    padding: 1px 3px;
+    height: 19px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnOpc {
+    background: #ffffff;
+    border: 1px solid #000080;
+    padding: 1px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #000;
+    font-family: inherit;
+}
+
+.btn-cal {
+    padding: 0;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #7f9db9;
+    vertical-align: middle;
+    margin-left: -1px;
+}
+
+/* Tabla de Resultados */
+.historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #000080;
+}
+
+.historico-table th {
+    background-color: #ffffff;
+    color: #000080;
+    border: 1px solid #000080;
+    padding: 2px 4px;
+    font-size: 11px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.historico-table td {
+    border: 1px solid #ccc;
+    padding: 3px 4px;
+    font-size: 11px;
+    vertical-align: middle;
+    color: #000;
+}
+
+.pagination-row {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.pagination-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px 0;
+}
+
+.btn-page {
+    border: 1px solid #7f9db9;
+    background: #f0f0f0;
+    padding: 1px 4px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.footer-btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-regresar {
+    background: #f0f0f0;
+    border: 1px solid #000;
+    padding: 2px 12px;
+    font-size: 11px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Input de fecha flotante/oculto para selector nativo */
+.date-picker-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}

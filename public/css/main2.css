@@ -1,0 +1,451 @@
+/**
+ * ============================================================================
+ * ARCHIVO: main2.css
+ * DESCRIPCIÓN: Estilos de componentes internos, formularios y tablas de datos.
+ * RESPONSABILIDAD:
+ *  - Grilla de búsqueda y Paneles informativos (.panels-grid).
+ *  - Desplegables tipo acordeón retro (.collapsible-header).
+ *  - Tablas de resultados, clientes e histórico (.historico-table, .table-clientes).
+ *  - Paginadores y componentes específicos de contenido interno.
+ * ============================================================================
+ */
+
+.search-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Fila superior para los títulos/labels */
+.labels-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.labels-row label {
+    font-weight: bold;
+    color: #000066;
+    font-size: 11px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.visita-row {
+    margin-left: auto;
+    /* Empuja únicamente el texto de la visita al fondo a la derecha */
+    font-weight: bold;
+    color: #000066;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.visita-val {
+    color: #cc0000;
+}
+
+/* Fila inferior para los campos y botones */
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.controls-row .btnOpc {
+    padding: 0px 25px !important;
+    white-space: nowrap;
+    height: 20%;
+}
+
+.panels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.panel-box {
+    border: 1px solid #000066;
+    background-color: #ffffff;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.panel-header {
+    text-align: center;
+    font-weight: bold;
+    color: #000066;
+    padding: 3px 5px;
+    border-bottom: 1px solid #000066;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.panel-body {
+    padding: 8px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.icon-lupa {
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* Desplegables Retro */
+.collapsible-header {
+    border: 1px solid #000066;
+    background-color: #ffffff;
+    color: #000066;
+    font-weight: bold;
+    padding: 2px 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 11px;
+    height: 22px;
+    box-sizing: border-box;
+}
+
+.collapsible-header .arrow-icon {
+    position: absolute;
+    right: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #000066;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 11px;
+    font-size: 9px;
+    background-color: #e0e0e0;
+}
+
+.bottom-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.left-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.right-collapsibles {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.full-width-collapsible {
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* Sección Filtros e Historial */
+.historico-filters {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    margin-bottom: 6px;
+}
+
+.filter-row label {
+    font-weight: bold;
+    color: #000066;
+    font-size: 11px;
+    margin: 0;
+}
+
+.field-label {
+    display: inline-block;
+    width: 100px;
+    /* Esto le da un ancho fijo a la etiqueta azul */
+    font-weight: bold;
+    color: #003366;
+}
+
+.btn-calendar {
+    height: 20px;
+    padding: 0 3px;
+    border: 1px solid #7f9db9;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+/* Tabla de Resultados e Histórico */
+.historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000066;
+}
+
+.historico-table th {
+    border: 1px solid #000066;
+    padding: 3px 5px;
+    font-weight: bold;
+    color: #000066;
+    text-align: left;
+    font-size: 11px;
+    background-color: #ffffff;
+}
+
+.historico-table td {
+    border: 1px solid #000066;
+    padding: 4px;
+    height: 24px;
+}
+
+.pagination-row {
+    background-color: #ececec;
+    text-align: center;
+}
+
+.pagination-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.btn-page {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-size: 11px;
+    height: 18px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.page-info {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 0 8px;
+    font-size: 11px;
+    height: 18px;
+    line-height: 16px;
+    display: inline-block;
+}
+
+
+/* --------------------------------------------------------------------------
+   PESTAÑA: INFORMACIÓN DE CLIENTE
+   -------------------------------------------------------------------------- */
+
+/* Tabla Retro Info Cliente */
+.table-retro-info {
+    width: 85%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #000066;
+    font-size: 11px;
+}
+
+.table-retro-info td {
+    padding: 2px 8px;
+    vertical-align: middle;
+}
+
+.table-retro-info .header-title {
+    background-color: #f1f1f1;
+    color: #000066;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #000066;
+    padding: 3px;
+}
+
+/* Grid de Planes Status (Pospago / Híbrido / Prepago) */
+.pospago-grid {
+    display: grid;
+    margin: 2% 7%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.table-plan-status {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000066;
+    font-size: 11px;
+}
+
+.table-plan-status th {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #000066;
+    text-align: center;
+    color: #000066;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.table-plan-status td {
+    padding: 1px 8px;
+}
+
+.table-plan-status .val-col {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Listado de Abonados / Clientes */
+.box-listado-clientes {
+    border: 1px solid #000066;
+    padding: 0;
+    background-color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box-listado-title {
+    text-align: center;
+    font-weight: bold;
+    color: #000066;
+    border-bottom: 1px solid #000066;
+    padding: 3px;
+    background-color: #f1f1f1;
+}
+
+/* Formulario Filtros Cliente */
+.filtros-container {
+    padding: 15px 20px;
+    position: relative;
+}
+
+.filter-label {
+    width: 120px;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #000066;
+}
+
+.dates-header-row {
+    display: flex;
+    margin-left: 170px;
+    gap: 60px;
+    color: #000066;
+    font-size: 10px;
+}
+
+.dates-subheader-row {
+    display: flex;
+    margin-left: 170px;
+    gap: 30px;
+    color: #333333;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.btn-filtrar-pos {
+    position: absolute;
+    right: 40px;
+    top: 65px;
+}
+
+/* Tabla Clientes Scrollable / Resultados */
+.table-container-scroll {
+    border-top: 1px solid #000066;
+    border-bottom: 1px solid #000066;
+    min-height: 110px;
+    background-color: #ffffff;
+}
+
+.table-clientes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-clientes th {
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #f0f0f0;
+    color: #000066;
+    padding: 3px 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.table-clientes td {
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 3px 8px;
+    background-color: #ffffff;
+}
+
+/* Paginador de Clientes */
+.paging-bar-clientes {
+    background: linear-gradient(to bottom, #eeeeee 0%, #dcdcdc 100%);
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.pagination-btn {
+    border: 1px solid #7f9db9;
+    background-color: #ffffff;
+    padding: 0 4px;
+    height: 18px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #000066;
+}
+
+/* --- 2. Tablas Medias (Datos del Equipo / Lim. Consumo) --- */
+.bloque-medio-grid {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.table-bloque-medio {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000066;
+    font-size: 11px;
+}
+
+.table-bloque-medio th {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #000066;
+    text-align: center;
+    color: #000066;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.table-bloque-medio td {
+    padding: 2px 8px;
+}
